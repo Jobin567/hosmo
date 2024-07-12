@@ -5,7 +5,7 @@ const state = {
 };
 
 module.exports.connect = async function (done) {
-    const url = 'mongodb://localhost:27017/';
+    const url = 'mongodb://localhost:27017';  // Corrected URL without trailing slash
     const dbName = 'shopping';
 
     try {
@@ -26,5 +26,3 @@ module.exports.connect = async function (done) {
 module.exports.get = function () {
     return state.db;
 };
-
-
